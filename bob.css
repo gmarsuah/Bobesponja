@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+    margin: 0;
+}
+.bob {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background: url('https://i.imgur.com/EnuO8fu.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+.eye {
+    position: absolute;
+    top: 90px;
+    width: 54px;
+    height: 54px;
+    background: white;
+    border-radius: 50%;
+}
+.eye.left {
+    left: 70px;
+}
+.eye.right {
+    right: 63px;
+}
+.pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+ .arm {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: yellow;
+    border-radius: 5px;
+    transform-origin: top;
+}
+.hand {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+.finger {
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    background: yellow;
+    border-radius: 5px;
+}
+.finger:nth-child(1) { left: 3px; top: -10px; }
+.finger:nth-child(2) { left: 10px; top: -15px; }
+.finger:nth-child(3) { left: 17px; top: -18px; }
+.finger:nth-child(4) { left: 24px; top: -15px; }
+.finger:nth-child(5) { left: 30px; top: -10px; }
+.arm.left {
+    left: -15px;
+    top: 100px;
+}
+.arm.right {
+    right: -15px;
+    top: 100px;
+}
+.arm.middle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    top: 120px;
+    display: none;
+}
+.arm.middle.left {
+    left: -20px;
+}
+.arm.middle.right {
+    right: -20px;
+}
+.pants {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: brown;
+    border-top: 3px solid black;
+  border-radius: 0 0 15px 15px;
+  
+
+}
+.legs {
+    position: absolute;
+    bottom: -78px;
+    left: 50%;
+    display: flex;
+    gap: 20px;
+    transform: translateX(-50%);
+  
+}
+.leg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shorts {
+    width: 50px;
+    height: 20px;
+    background: brown;
+    border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.leg-part {
+    width: 20px;
+    height: 40px;
+    background: yellow;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.sock {
+    width: 20px;
+    height: 10px;
+    background: white;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.shoe {
+    width: 40px;
+    height: 15px;
+    background: black;
+    border-radius: 50% 50% 0 0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  position: absolute;
+top: 70px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.controls button {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #ffcc00;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.controls button:hover {
+    background-color: #ff9900;
+}

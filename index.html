@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Esponja en CSS</title>
+    <style src="bob.css"></style>
+    <script src="bob.js"></script>
+</head>
+<body>
+    <div class="bob">
+        <div class="eye left">
+            <div class="pupil"></div>
+        </div>
+        <div class="eye right">
+            <div class="pupil"></div>
+        </div>
+        <div class="arm left">
+            <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+            </div>
+        </div>
+        <div class="arm right">
+            <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+            </div>
+        </div>
+        <div class="arm middle left">
+                     <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+            </div>
+        </div>
+        <div class="arm middle right">
+                     <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+            </div>
+        </div>
+        <div class="pants"></div>
+        <div class="legs">
+            <div class="leg">
+                <div class="shorts"></div>
+                <div class="leg-part"></div>
+                <div class="sock"></div>
+                <div class="shoe"></div>
+            </div>
+            <div class="leg">
+                <div class="shorts"></div>
+                <div class="leg-part"></div>
+                <div class="sock"></div>
+                <div class="shoe"></div>
+            </div>
+        </div>
+    </div>
+  <div class="controls">
+        <button onclick="moveArms('up')">Brazos arriba</button>
+    <button onclick="moveArms('middle')">Brazos en medio</button>
+    <button onclick="moveArms('down')">Brazos abajo</button>
+          <button onclick="movePupils('left')">Izquierda</button>
+    <button onclick="movePupils('mid-left')">Centro-Izquierda</button>
+    <button onclick="movePupils('center')">Centro</button>
+    <button onclick="movePupils('mid-right')">Centro-Derecha</button>
+    <button onclick="movePupils('right')">Derecha</button>
+    </div>
+</body>
+</html>
