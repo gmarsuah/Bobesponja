@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bob Esponja en CSS</title>
-    <style src="bob.css"></style>
-    <script src="bob.js"></script>
+    <link rel="stylesheet" href="bob.css">
+    <script src="js/bob.js"></script>
+    <script src="js/mqttw31.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+            $(document).ready(function () {
+                MQTTconnect();
+            });
+    </script>
 </head>
 <body>
     <div class="bob">
@@ -47,7 +54,22 @@
                 <div class="finger"></div>
             </div>
         </div>
-        <div class="pants"></div>
+        <div class="camisa">
+            <div class="cuello primero"></div>
+            <div class="corbata">
+                <div class="cuello_corbata"></div>
+            </div>
+            <div class="cuello segundo"></div>
+        </div>
+            <div class="cola_corbata"></div>
+        <div class="pants">
+            <div class="belt">
+                <div class="belt-part"></div>
+                <div class="belt-part"></div>
+                <div class="belt-part"></div>
+                <div class="belt-part"></div>
+            </div>
+        </div>
         <div class="legs">
             <div class="leg">
                 <div class="shorts"></div>
@@ -63,15 +85,8 @@
             </div>
         </div>
     </div>
-  <div class="controls">
-        <button onclick="moveArms('up')">Brazos arriba</button>
-    <button onclick="moveArms('middle')">Brazos en medio</button>
-    <button onclick="moveArms('down')">Brazos abajo</button>
-          <button onclick="movePupils('left')">Izquierda</button>
-    <button onclick="movePupils('mid-left')">Centro-Izquierda</button>
-    <button onclick="movePupils('center')">Centro</button>
-    <button onclick="movePupils('mid-right')">Centro-Derecha</button>
-    <button onclick="movePupils('right')">Derecha</button>
+    <div class="error-message">
+        <p>La pantalla debe ser más grande para poder apreciar esta obra de arte.</p>
     </div>
 </body>
 </html>

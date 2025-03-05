@@ -9,22 +9,22 @@ body {
 .bob {
     position: relative;
     width: 250px;
-    height: 300px;
-    background: url('https://i.imgur.com/EnuO8fu.jpeg') no-repeat center center;
+    height: 325px;
+    background: url('https://i.imgur.com/EnuO8fu.jpeg') no-repeat center -35px;
     background-size: cover;
     border-radius: 20px;
     border: 3px solid black;
 }
 .eye {
     position: absolute;
-    top: 90px;
+    top: 67px;
     width: 54px;
     height: 54px;
     background: white;
     border-radius: 50%;
 }
 .eye.left {
-    left: 70px;
+    left: 67px;
 }
 .eye.right {
     right: 63px;
@@ -72,11 +72,11 @@ body {
 .finger:nth-child(5) { left: 30px; top: -10px; }
 .arm.left {
     left: -15px;
-    top: 100px;
+    top: 185px;
 }
 .arm.right {
     right: -15px;
-    top: 100px;
+    top: 185px;
 }
 .arm.middle {
     width: 20px;
@@ -84,7 +84,7 @@ body {
     border-radius: 50%;
     background: yellow;
     position: absolute;
-    top: 120px;
+    top: 185px;
     display: none;
 }
 .arm.middle.left {
@@ -93,17 +93,108 @@ body {
 .arm.middle.right {
     right: -20px;
 }
+
+/* --- CAMISA --- */
+.camisa {
+    width:100%;
+    height:50px;
+    background:#fff;
+    position: absolute;
+    bottom:52px;
+    border-top:2px solid #000;
+    z-index:10;
+    overflow:hidden;
+}
+
+.cuello {
+    width:50px;
+    height:30px;
+    position: absolute;
+    background:#fff;
+    top:-25px;
+    border:2px solid #000;
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.cuello.primero {
+    left:52px;
+}
+
+.cuello.segundo {
+    left:146px;
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.corbata {
+}
+
+.cuello_corbata {
+    width:27px;
+    height:27px;
+    background:#F00200;
+    border:2px solid #000;
+    position:absolute;
+    left:111px;
+    bottom:35px;
+    z-index:50;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cola_corbata {
+    width:35px;
+    height:35px;
+    background:#F00200;
+    border:2px solid #000;
+    position:absolute;
+    left:107px;
+    bottom:36px;
+    z-index:50;
+    -moz-transform: rotate(44deg);
+    -webkit-transform: rotate(44deg);
+    -o-transform: rotate(44deg);
+    -ms-transform: rotate(44deg);
+    transform: rotate(44deg);
+}
+
 .pants {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: brown;
     border-top: 3px solid black;
   border-radius: 0 0 15px 15px;
-  
-
 }
+.belt {
+    position: absolute;
+    top: 5px; /* Ajusta la posición dentro de los pantalones */
+    left: 10%;
+    width: 80%; /* Que ocupe la mayor parte del ancho */
+    height: 10px; /* Altura del cinturón */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre rectángulos */
+}
+
+/* Rectángulos del cinturón */
+.belt-part {
+    width: 20px; /* Ajusta el tamaño de cada parte */
+    height: 8px; /* Grosor del cinturón */
+    background: black;
+    border-radius: 2px; /* Bordes ligeramente redondeados */
+}
+
 .legs {
     position: absolute;
     bottom: -78px;
@@ -170,4 +261,30 @@ top: 70px;
 }
 .controls button:hover {
     background-color: #ff9900;
+}
+/* Mensaje oculto por defecto */
+.error-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+/* Ocultar a Bob Esponja y mostrar el mensaje en pantallas pequeñas */
+@media (max-width: 380px), (max-height: 505px) {
+    .bob {
+        display: none;
+    }
+    .error-message {
+        display: block;
+    }
 }
