@@ -10,24 +10,24 @@ body {
     position: relative;
     width: 250px;
     height: 325px;
-    background: url('img/bobby.jpg') no-repeat center -35px;
+    background: url('img/bobby.png') no-repeat center -35px;
     background-size: cover;
     border-radius: 20px;
     border: 3px solid black;
 }
 .eye {
     position: absolute;
-    top: 67px;
-    width: 54px;
-    height: 54px;
+    top: 57px;
+    width: 60px;
+    height: 60px;
     background: white;
     border-radius: 50%;
 }
 .eye.left {
-    left: 67px;
+    left: 57px;
 }
 .eye.right {
-    right: 63px;
+    right: 50px;
 }
 .pupil {
     position: absolute;
