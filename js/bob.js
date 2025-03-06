@@ -83,9 +83,50 @@ function onMessageArrived(message) {
 }
 
 function moveArms(arm, position) {
-    console.log(arm, position);
+    let armElement, relatedMiddleArm;
     
-    if (arm == "izq"){
+    if (arm === "izq") {
+        armElement = document.querySelector(`.arm.left`);
+        relatedMiddleArm = document.querySelector(`.arm.middle.left`);
+    } else if (arm === "der") {
+        armElement = document.querySelector(`.arm.right`);
+        relatedMiddleArm = document.querySelector(`.arm.middle.right`);
+    }
+
+    if (!armElement) {
+        console.error(`No se encontró el brazo: ${arm}`);
+        return;
+    }
+    if (position === 'medio') {
+        if (relatedMiddleArm) {
+            relatedMiddleArm.style.display = 'block';
+            armElement.style.display = 'none';
+        }
+    } else {
+        // Mostramos el brazo y ocultamos las manos solas
+        armElement.style.display = 'block';
+        if (relatedMiddleArm) relatedMiddleArm.style.display = 'none';
+
+        switch (position) {
+            case 'arriba':
+                if (arm == "izq") {
+                    armElement.style = 'transform: rotate(-274deg); left:-116px; top:72px;';
+                } else {
+                    armElement.style = 'transform: scaleX(-1) rotate(84deg); top: 74px; right: -116px';
+                }
+                break;
+            case 'abajo':
+                if (arm =="izq") {
+                    armElement.style = 'rotate(-90deg); top: 185px; left:-103px;';
+                } else {
+                    armElement.style = 'scaleX(-1) rotate(270deg); top: 185px; right: -103px';
+                }
+                break;
+            default:
+                console.error('Posición no válida');
+        }
+    }
+   /* if (arm == "izq"){
         var armElement = document.querySelector(`.arm.left`);
         var relatedMiddleArm = document.querySelector(`.arm.middle.left`);
 
@@ -98,7 +139,6 @@ function moveArms(arm, position) {
         return;
     }
 
-    console.log("position: ", position);
     if (position === 'medio') {
         if (relatedMiddleArm) {
             relatedMiddleArm.style.display = 'block';
@@ -111,7 +151,6 @@ function moveArms(arm, position) {
 
         switch (position) {
             case 'arriba':
-                console.log("Arriba!!");
                 armElement.style.transform = 'rotate(180deg)';
                 break;
             case 'abajo':
@@ -120,29 +159,8 @@ function moveArms(arm, position) {
             default:
                 console.error('Posición no válida');
         }
-    }
-
-    
-   /* if (position === "medio") {
-        leftArm.style.display = 'none';
-        rightArm.style.display = 'none';
-        leftMiddleArm.style.display = 'block';
-        rightMiddleArm.style.display = 'block';
-    } else if (position === 'arriba') {
-        leftArm.style.display = 'block';
-        rightArm.style.display = 'block';
-        leftMiddleArm.style.display = 'none';
-        rightMiddleArm.style.display = 'none';
-        leftArm.style.transform = 'rotate(180deg)';
-        rightArm.style.transform = 'rotate(-180deg)';
-    } else {
-        leftArm.style.display = 'block';
-        rightArm.style.display = 'block';
-        leftMiddleArm.style.display = 'none';
-        rightMiddleArm.style.display = 'none';
-        leftArm.style.transform = 'rotate(0deg)';
-        rightArm.style.transform = 'rotate(0deg)';
     }*/
+
 }
 
 function movePupils(position) {

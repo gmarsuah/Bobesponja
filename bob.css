@@ -10,7 +10,7 @@ body {
     position: relative;
     width: 250px;
     height: 325px;
-    background: url('https://i.imgur.com/EnuO8fu.jpeg') no-repeat center -35px;
+    background: url('img/bobby.jpg') no-repeat center -35px;
     background-size: cover;
     border-radius: 20px;
     border: 3px solid black;
@@ -40,7 +40,63 @@ body {
     transform: translate(-50%, -50%);
     border: 2px solid black;
 }
- .arm {
+/* --- BRAZOS NORMALES (Mano completa) --- */
+
+/* Brazo derecho */
+.arm.right {
+    position: absolute;
+    top: 185px;
+    right: -103px;
+    width: 200px;
+    height: 160px;
+    background: url('img/mano.png') no-repeat center;
+    background-size: contain;
+    transform:  scaleX(-1) rotate(270deg); /* Rotar el brazo hacia abajo */
+    z-index: 11;
+}
+
+/* Brazo izquierdo (Reflejado) */
+.arm.left {
+    position: absolute;
+    top: 185px;
+    left: -103px;
+    width: 200px;
+    height: 160px;
+    background: url(img/mano.png) no-repeat center;
+    background-size: contain;
+    transform: rotate(-90deg);
+    z-index: 11;
+}
+
+/* --- MANOS SOLAS (Más arriba y separadas a los lados) --- */
+
+.arm.middle.right {
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: 238px;
+    width: 80px;
+    height: 80px;
+    background: url(img/manosola.png) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1) rotate(45deg);
+}
+
+
+.arm.middle.left {
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: -67px;
+    width: 80px;
+    height: 80px;
+    background: url(img/manosola.png) no-repeat center;
+    background-size: contain;
+    transform: rotate(45deg);
+    z-index: 11;
+}
+
+/* .arm {
     position: absolute;
     width: 10px;
     height: 80px;
@@ -93,7 +149,7 @@ body {
 .arm.middle.right {
     right: -20px;
 }
-
+*/
 /* --- CAMISA --- */
 .camisa {
     width:100%;
